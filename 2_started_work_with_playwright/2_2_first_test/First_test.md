@@ -54,5 +54,3 @@ def test_add_todo(playwright: Playwright) -> None:
 Каждый раз запускать тест с помощью консоли - не самый удобный вариант. У Pycharm есть решение данной проблемы. Нажмите
 Ctrl-Shift-A(для Windows) или Cmd-Shift-A(для MacOS). В открывшемся окне введите pytest. Откроется меню настроек Python
 Integrated Tools с выбором тест-раннера. Выберите в качестве тест-раннера по умолчанию pytest.
-
-
