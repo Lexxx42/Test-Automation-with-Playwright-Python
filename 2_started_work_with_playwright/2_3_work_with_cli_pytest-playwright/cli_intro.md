@@ -44,3 +44,32 @@ pytest --device="iPhone 13 Mini"
 
 `--screenshot` Должен ли автоматически делаться снимок экрана после каждого теста. on, off или only-on-failure (по
 умолчанию: off).
+
+Кроме CLI, на выполнение теста можно влиять с помощью декораторов pytest.
+
+## Пропустить тест браузером
+
+```python
+import pytest
+
+@pytest.mark.skip_browser("firefox")
+def test_visit_example(page):
+    page.goto("https://example.com")
+    # ...
+```
+
+## Запуск в определенном браузере
+
+```python
+import pytest
+
+
+@pytest.mark.only_browser("chromium")
+def test_visit_example(page):
+    page.goto("https://example.com")
+    # ...
+```
+
+С помощью какой команды CLI можно запустить тесты в браузере Chrome
+
+> --browser-channel=chrome
