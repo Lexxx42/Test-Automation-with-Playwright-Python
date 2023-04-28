@@ -75,3 +75,5 @@ checkboxes = page.locator("input")
 for checkbox in checkboxes.all():
     checkbox.check()
 ```
+
+https://playwright.dev/docs/locators
